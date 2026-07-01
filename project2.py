@@ -1,6 +1,3 @@
-from unittest import case
-
-
 print("welcome to an student organizer data program!!")
 print("1 to add student data")
 print("2 to display all student")
@@ -12,8 +9,7 @@ studentinformation=[]
 choice=0
 while choice<7:
      choice=int(input("enter your choice: "))
-
-     match choice:
+         match choice:
           case 1:
                name=input(("enter your name:"))
                age=int(input("enter your age:"))
@@ -42,7 +38,7 @@ while choice<7:
           case 3:
                print("for update")
                studentid_for_update=int(input("enter your student id for changes:"))
-               for i in studentinformation:
+               for i in range(len(studentinformation)):
                     if(studentid_for_update==studentinformation[i].get("studentid_student")):
                          i+=1
                          print("1 for updating name")
